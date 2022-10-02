@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/navbar/utils/header/Header";
+import LeftPart from "./components/header/navbar/utils/leftPart/LeftPart";
+import NavBar from "./components/header/navbar/utils/navbar/NavBar";
+import RightPart from "./components/header/navbar/utils/rightPart/RightPart";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="w-full min-h-[90vh] grid grid-cols-12">
+        <NavBar />
+        <div className="grid grid-cols-1 xl:grid-cols-5 w-full col-span-10">
+          {/* left part */}
+          <LeftPart />
+          {/* right part */}
+          <RightPart />
+        </div>
+      </div>
     </div>
   );
 }
-
 export default App;
